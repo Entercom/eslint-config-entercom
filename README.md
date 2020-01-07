@@ -12,7 +12,7 @@ npm install --save-dev entercom/eslint-config-entercom
 
 Install peer dependencies
 ```
-npm install --save-dev eslint-config-airbnb-base eslint-plugin-import eslint-plugin-mocha eslint-plugin-no-only-tests 
+npm install --save-dev eslint-config-airbnb-base eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-mocha eslint-plugin-no-only-tests eslint-plugin-node
 ```
 
 Add configuration as an extends
