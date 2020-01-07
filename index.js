@@ -33,6 +33,10 @@ module.exports = {
       }
     }
   ],
+  plugins: [
+    'jsdoc',
+    'node'
+  ],
   rules: {
     'jsdoc/no-undefined-types': 0,
     'max-len': [
@@ -64,6 +68,14 @@ module.exports = {
     'array-element-newline': [
       'error',
       'consistent'
+    ],
+    'func-style': [
+      'error',
+      'declaration'
+    ],
+    'node/exports-style': [
+      'error',
+      'module.exports'
     ],
     'object-curly-newline': [
       'error',
