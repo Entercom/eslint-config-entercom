@@ -22,7 +22,7 @@
     "eslint-plugin-import": ">=2",
     "eslint-plugin-jsdoc": ">=20",
     "eslint-plugin-mocha": ">=6",
-    "eslint-plugin-node": ">=11",
-    "eslint-plugin-no-only-tests": ">=2"
+    "eslint-plugin-no-only-tests": ">=2",
+    "eslint-plugin-node": ">=11"
   }
 }

@@ -1,14 +1,7 @@
 module.exports = {
-  parserOptions: {
-    ecmaVersion: 10,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true
-    }
-  },
   env: {
-    node: true,
-    es6: true
+    es6: true,
+    node: true
   },
   extends: [
     'eslint:recommended',
@@ -16,51 +9,35 @@ module.exports = {
   ],
   overrides: [
     {
+      env: {
+        es6: true,
+        mocha: true,
+        node: true
+      },
       files: [
         'test/**/*_spec.js'
       ],
       plugins: [
-        'no-only-tests',
-        'mocha'
+        'mocha',
+        'no-only-tests'
       ],
-      env: {
-        node: true,
-        mocha: true,
-        es6: true
-      },
       rules: {
         'no-only-tests/no-only-tests': 2
       }
     }
   ],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    },
+    ecmaVersion: 10,
+    sourceType: 'module'
+  },
   plugins: [
     'jsdoc',
     'node'
   ],
   rules: {
-    'jsdoc/no-undefined-types': 0,
-    'max-len': [
-      'error',
-      {
-        code: 120,
-        ignoreComments: true,
-        ignoreUrls: true,
-        ignoreTemplateLiterals: true
-      }
-    ],
-    'comma-dangle': [
-      'error',
-      'never'
-    ],
-    'no-multiple-empty-lines': [
-      'error',
-      {
-        max: 1,
-        maxBOF: 0,
-        maxEOF: 1
-      }
-    ],
-    camelcase: 0,
     'array-bracket-newline': [
       'error',
       'consistent'
@@ -69,18 +46,23 @@ module.exports = {
       'error',
       'consistent'
     ],
+    camelcase: 0,
+    'comma-dangle': [
+      'error',
+      'never'
+    ],
     'func-style': [
       'error',
       'declaration'
     ],
-    'node/exports-style': [
-      'error',
-      'module.exports'
-    ],
-    'object-curly-newline': [
+    'jsdoc/no-undefined-types': 0,
+    'max-len': [
       'error',
       {
-        consistent: true
+        code: 120,
+        ignoreComments: true,
+        ignoreUrls: true,
+        ignoreTemplateLiterals: true
       }
     ],
     'no-confusing-arrow': 0,
@@ -94,6 +76,14 @@ module.exports = {
         ]
       }
     ],
+    'no-multiple-empty-lines': [
+      'error',
+      {
+        max: 1,
+        maxBOF: 0,
+        maxEOF: 1
+      }
+    ],
     'no-param-reassign': [
       'error',
       {
@@ -105,6 +95,16 @@ module.exports = {
       'error',
       'LabeledStatement',
       'WithStatement'
+    ],
+    'node/exports-style': [
+      'error',
+      'module.exports'
+    ],
+    'object-curly-newline': [
+      'error',
+      {
+        consistent: true
+      }
     ]
   }
 };
