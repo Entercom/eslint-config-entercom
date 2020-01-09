@@ -33,6 +33,10 @@ module.exports = {
     ecmaVersion: 10,
     sourceType: 'module'
   },
+  plugins: [
+    'jsdoc',
+    'node'
+  ],
   rules: {
     'array-bracket-newline': [
       'error',
@@ -46,6 +50,10 @@ module.exports = {
     'comma-dangle': [
       'error',
       'never'
+    ],
+    'func-style': [
+      'error',
+      'declaration'
     ],
     'jsdoc/no-undefined-types': 0,
     'max-len': [
@@ -87,6 +95,10 @@ module.exports = {
       'error',
       'LabeledStatement',
       'WithStatement'
+    ],
+    'node/exports-style': [
+      'error',
+      'module.exports'
     ],
     'object-curly-newline': [
       'error',
