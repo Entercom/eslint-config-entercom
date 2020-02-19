@@ -93,6 +93,13 @@ module.exports = {
       {
         consistent: true
       }
+    ],
+    'prefer-destructuring': [
+      'error',
+      {
+        'array': false,
+        'object': true
+      }
     ]
   }
 };
